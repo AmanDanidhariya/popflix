@@ -1,70 +1,66 @@
-
-.poster_img{
-width: 200px;
-height: 220px;
-border-radius: 5px;
+.poster_img {
+  width: 200px;
+  height: 220px;
+  border-radius: 5px;
 }
-/* styles.module.css */
 
 .container {
-    width: 80%;
-    display: flex;
-    margin: auto;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    
-  }
-  .rating{
-    font-size:1rem;
-  }
-  .movie_details{
-    margin-top: 0.7rem;
-    margin-bottom: 0.7rem;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    margin-left: 1rem;
-  }
-  .movie_details_font{
-    color:gray;
-  }
-  
-  .title{
-    font-size: 1rem;
-    max-width: 200px;
-    word-wrap:break-word;
-  }
-  
-  .column {
-    flex: 1;
-    margin: 10px;
-    padding-top: 1.1rem;
-    box-shadow: 10px 10px 5px gray;
-    border-radius: 10px;
-    text-align: center;
-    box-sizing: border-box;
-    background-color: rgb(255, 253, 253);
-     min-width:250px; 
-     min-height: 320px;
-  } 
-  a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.8rem;
-    border-radius: 0.5rem;
-    transition: all 0.3s linear;
-  }  
-  a:hover img {
-    transform: scale(1.1);
-  }
-
-.fontBold{
-    font-weight: bolder;
+  width: 80%;
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-  
-  @media screen and (max-width: 480px) {
-    .column {
-      min-width: 300px; 
-    }
+.rating {
+  font-size: 1rem;
+}
+.movie_details {
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 1rem;
+}
+.movie_details_font {
+  color: gray;
+}
+
+.title {
+  font-size: 1rem;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+.column {
+  flex: 1;
+  margin: 10px;
+  padding-top: 1.1rem;
+  box-shadow: 10px 10px 5px gray;
+  border-radius: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: rgb(255, 253, 253);
+  min-width: 250px;
+  min-height: 320px;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.8rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s linear;
+}
+a:hover img {
+  transform: scale(1.1);
+}
+
+.fontBold {
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 480px) {
+  .column {
+    min-width: 300px;
   }
-  
+}

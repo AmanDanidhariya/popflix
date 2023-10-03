@@ -10,7 +10,7 @@ const MovieProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState({ showError: "false", errorMessage: "" });
-  const [query , setQuery] = useState("")
+  const [query, setQuery] = useState("");
 
   const getMovies = async (url) => {
     setIsLoading(true);
@@ -29,27 +29,28 @@ const MovieProvider = ({ children }) => {
       setError({
         showError: true,
         errorMessage: error.message,
-      })
+      });
       console.log(error.message);
     }
   };
 
   useEffect(() => {
-   let clearTimer =  setTimeout(()=>{
-        //if we have query then search movie at search end point 
-    if(query){
-      getMovies(`${SEARCH_URL}&query=${query}`); 
-    }else{
-      getMovies(API_URL);
-    }
-    },500)
-    //make only one request after enter query 
-    return ()=> clearTimeout(clearTimer);
-    
+    let clearTimer = setTimeout(() => {
+      //if we have query then search movie at search end point
+      if (query) {
+        getMovies(`${SEARCH_URL}&query=${query}`);
+      } else {
+        getMovies(API_URL);
+      }
+    }, 500);
+    //make only one request after enter query
+    return () => clearTimeout(clearTimer);
   }, [query]);
 
   return (
-    <MovieContext.Provider value={{ isLoading, error, movies, query , setQuery }}>
+    <MovieContext.Provider
+      value={{ isLoading, error, movies, query, setQuery }}
+    >
       {children}
     </MovieContext.Provider>
   );

@@ -5,15 +5,15 @@ import styles from "./Movies.module.css";
 
 const Movies = () => {
   //get movie data from context
-  const { movies, query,isLoading } = useMovie();
+  const { movies, query, isLoading } = useMovie();
 
   //adding a loading state while api calling
-  if(isLoading){
-    return(
+  if (isLoading) {
+    return (
       <div className="loading_section">
         <div className="loading">Loading...</div>
       </div>
-    )
+    );
   }
 
   return (

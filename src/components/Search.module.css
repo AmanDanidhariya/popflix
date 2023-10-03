@@ -1,16 +1,16 @@
-.search_container{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 2rem 0;
+.search_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem 0;
 }
-.input_container{
-    padding: 12px;
-    border-radius: 10px;
-    border: none;
+.input_container {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
 }
-.movie_card_error{
-    color: rgb(241, 66, 66);
-    font-size: 1.2rem;
-    margin-top: 1rem;
+.movie_card_error {
+  color: rgb(241, 66, 66);
+  font-size: 1.2rem;
+  margin-top: 1rem;
 }
