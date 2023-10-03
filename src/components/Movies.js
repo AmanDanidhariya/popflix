@@ -7,6 +7,7 @@ const Movies = () => {
   //get movie data from context
   const { movies, query,isLoading } = useMovie();
 
+  //adding a loading state while api calling
   if(isLoading){
     return(
       <div className="loading_section">

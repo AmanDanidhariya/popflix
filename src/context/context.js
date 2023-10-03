@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 
-const API_URL = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}`;
+export const API_URL = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}`;
 const SEARCH_URL = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_API_KEY}`;
 
 const MovieContext = createContext();
@@ -13,9 +13,9 @@ const MovieProvider = ({ children }) => {
   const [query , setQuery] = useState("")
 
   const getMovies = async (url) => {
+    setIsLoading(true);
     try {
       //loading indicator value true
-      setIsLoading(true);
       const response = await axios.get(url);
       const data = response.data.results;
       //if we have data then update in movies
