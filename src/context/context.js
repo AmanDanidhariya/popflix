@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 
-const API_URL = `https://api.themoviedb.org/3/discover/movie?api_key=2147d6597ab11e70b1c0fc5f5e85528f`;
+const API_URL = `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}`;
 
 const MovieContext = createContext();
 
