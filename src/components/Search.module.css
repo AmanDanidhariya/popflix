@@ -1,0 +1,10 @@
+.search_container{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.input_container{
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+}
