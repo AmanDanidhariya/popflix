@@ -24,14 +24,13 @@ const MovieProvider = ({ children }) => {
         setIsLoading(false);
         //update data in movies array
         setMovies(data);
-      } else {
-        setError({
-          showError: true,
-          errorMessage: data.error,
-        });
       }
     } catch (error) {
-      console.log(error);
+      setError({
+        showError: true,
+        errorMessage: error.message,
+      })
+      console.log(error.message);
     }
   };
 
@@ -39,11 +38,11 @@ const MovieProvider = ({ children }) => {
    let clearTimer =  setTimeout(()=>{
         //if we have query then search movie at search end point 
     if(query){
-      getMovies(`${SEARCH_URL}&query=${query}`);
+      getMovies(`${SEARCH_URL}&query=${query}`); 
     }else{
       getMovies(API_URL);
     }
-    },900)
+    },500)
     //make only one request after enter query 
     return ()=> clearTimeout(clearTimer);
     

@@ -5,7 +5,15 @@ import styles from "./Movies.module.css";
 
 const Movies = () => {
   //get movie data from context
-  const { movies, query } = useMovie();
+  const { movies, query,isLoading } = useMovie();
+
+  if(isLoading){
+    return(
+      <div className="loading_section">
+        <div className="loading">Loading...</div>
+      </div>
+    )
+  }
 
   return (
     <>
