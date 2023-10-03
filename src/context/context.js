@@ -18,7 +18,6 @@ const MovieProvider = ({ children }) => {
       setIsLoading(true);
       const response = await axios.get(url);
       const data = response.data.results;
-      console.log(data);
       //if we have data then update in movies
       if (data) {
         //loading indicator value false
@@ -37,10 +36,17 @@ const MovieProvider = ({ children }) => {
   };
 
   useEffect(() => {
+   let clearTimer =  setTimeout(()=>{
+        //if we have query then search movie at search end point 
     if(query){
       getMovies(`${SEARCH_URL}&query=${query}`);
+    }else{
+      getMovies(API_URL);
     }
-    getMovies(API_URL);
+    },900)
+    //make only one request after enter query 
+    return ()=> clearTimeout(clearTimer);
+    
   }, [query]);
 
   return (
