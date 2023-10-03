@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
-import MovieCard from "./components/MovieCard"
+import SingleCard from "./components/SingleCard"
 import PageNotFound from './components/PageNotFound';
 
 
@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/"  element={<Home/>}/>
-        <Route path="movie/:id" element={<MovieCard/>}/>
+        <Route path="movie/:id" element={<SingleCard/>}/>
         <Route path="*" element={<PageNotFound/>}/>
       </Routes>
     </BrowserRouter>
